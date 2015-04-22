@@ -1,10 +1,10 @@
 --Script that calculates % return between 2 dates for all tickers in a table
-declare @ticker varchar(max);
-declare @startDate varchar(max);
+declare @ticker varchar(20);
+declare @startDate date;
 declare @endDate date;
 
 --Enter your dates here
-set @startDate ='2015-01-02'
+set @startDate = '2015-01-02'
 set @endDate = '2015-04-22'
 
 --Checks if #YTDResults table exists and deletes it if it does
@@ -15,7 +15,7 @@ end
 
 CREATE TABLE #YTDResults
 (
-	Ticker varchar(15),
+	Ticker varchar(20),
 	YTD_Return decimal (10,4)
 )
 
